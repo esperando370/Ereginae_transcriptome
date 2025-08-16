@@ -1,0 +1,25 @@
+name: rnaseq
+channels: [conda-forge, bioconda, defaults]
+dependencies:
+  - python=3.11
+  - fastp
+  - hisat2
+  - samtools
+  - picard
+  - htseq
+  - gffread
+  - r-base>=4.2
+  - r-deseq2
+  - r-tidyverse
+  - r-pheatmap
+  - r-ggpubr
+  - r-ggplot2
+  - r-plotly
+  - r-ggvenndiagram
+  - r-stringr
+  - bioconductor-apeglm
+  - bioconductor-topgo
+  - bioconductor-annotationdbi
+  - bioconductor-org.gg.eg.db
+  - r-circlize
+  - r-reshape2
