@@ -6,10 +6,6 @@
 #SBATCH -t 08:00:00
 #SBATCH -p savio
 
-set -euo pipefail
-source scripts/utils.sh
-
-: "${sample:?Need sample variable}"
 
 # Try RAW2 first; if not found, fall back to RAW1
 R1="${RAW2}/${sample}_R1.fastq.gz"
@@ -24,7 +20,7 @@ if [[ ! -f "$R1" || ! -f "$R2" ]]; then
   exit 1
 fi
 
-module load fastp || true
+module load fastp
 
 fastp \
   -i "$R1" -I "$R2" \
